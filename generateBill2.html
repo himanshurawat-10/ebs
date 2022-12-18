@@ -1,0 +1,257 @@
+ <head>
+    <meta charset="UTF-8">
+   <!-- <title> Responsive Drop Down Navigation Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+
+body {
+          background: #f2f2f2;
+}
+
+nav {
+          background: #171c24;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          height: 70px;
+          padding: 0 100px;
+}
+
+nav .logo {
+          color: #fff;
+          font-size: 30px;
+          font-weight: 600;
+          letter-spacing: -1px;
+}
+
+nav .nav-items {
+          display: flex;
+          flex: 1;
+          padding: 0 0 0 40px;
+}
+
+nav .nav-items li {
+          list-style: none;
+          padding: 0 15px;
+}
+
+nav .nav-items li a {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          text-decoration: none;
+}
+
+nav .nav-items li a:hover {
+          color: #ff3d00;
+}
+
+nav form {
+          display: flex;
+          height: 40px;
+          padding: 2px;
+          background: #1e232b;
+          min-width: 18% !important;
+          border-radius: 2px;
+          border: 1px solid rgba(155, 155, 155, 0.2);
+}
+
+nav form .search-data {
+          width: 100%;
+          height: 100%;
+          padding: 0 10px;
+          color: #fff;
+          font-size: 17px;
+          border: none;
+          font-weight: 500;
+          background: none;
+}
+
+nav form button {
+          padding: 0 15px;
+          color: #fff;
+          font-size: 17px;
+          background: #ff3d00;
+          border: none;
+          border-radius: 2px;
+          cursor: pointer;
+}
+
+nav form button:hover {
+          background: #e63600;
+}
+
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon {
+          width: 40px;
+          text-align: center;
+          margin: 0 50px;
+          font-size: 18px;
+          color: #fff;
+          cursor: pointer;
+          display: none;
+}
+
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon {
+          display: none;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+
+ 
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+ 
+</style>
+
+   </head>
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">CodingLab</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">CodingLab</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="newindex.html">HOME</a></li>
+        
+          <li>
+            <a href="#">Bills</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="generateBill2.html">Get all bills</a></li>
+              <li><a href="#">Bill By area and city</a></li>
+              <li><a href="#">Bill by month and year</a></li>
+            
+            </ul>
+          </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <div class="input-box">
+          <input type="text" placeholder="Search...">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="title">Generate Bill</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Connection Id</span>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Enter your connection id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Current Readings</span>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Enter your current readings" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>

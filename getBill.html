@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>EBS</title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+       <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      
+   </head>
+   <body>
+      <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+           EBS
+         </div>
+         <div class="nav-items">
+          <li>
+            <a href="index.html">HOME</a>
+          </li>
+            <li><a href="data.html">Get All Bills</a></li>
+            <li><a href="GetBill_Month_Year.html">Get Bill By Month and Year</a></li>
+            <li><a href="getBillArea_City.html">Get Bill By Area and City</a></li>
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+
+      </nav>
+
+
+      <div class="content">
+         <header class="space">EBS asdasdasd</header>
+       <img src="https://www.oncor.com/content/dam/thewire/article-images/powering-texas/UNDERSTANDING%20THE%20ONCOR%20PART%20OF%20YOUR%20ELECTRIC%20BILL.jpg" alt="" height="500px" width="700px">
+         <div class="space text">
+           EBSasdasdasdasdasda
+         </div>
+      </div>
+      <script>
+         const menuBtn = document.querySelector(".menu-icon span");
+         const searchBtn = document.querySelector(".search-icon");
+         const cancelBtn = document.querySelector(".cancel-icon");
+         const items = document.querySelector(".nav-items");
+         const form = document.querySelector("form");
+         menuBtn.onclick = ()=>{
+           items.classList.add("active");
+           menuBtn.classList.add("hide");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+         cancelBtn.onclick = ()=>{
+           items.classList.remove("active");
+           menuBtn.classList.remove("hide");
+           searchBtn.classList.remove("hide");
+           cancelBtn.classList.remove("show");
+           form.classList.remove("active");
+           cancelBtn.style.color = "#ff3d00";
+         }
+         searchBtn.onclick = ()=>{
+           form.classList.add("active");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+      </script>
+   </body>
+</html>
